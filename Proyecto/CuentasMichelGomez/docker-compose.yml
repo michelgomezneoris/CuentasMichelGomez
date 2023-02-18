@@ -1,0 +1,38 @@
+﻿version: "3.4"
+
+networks:
+  dev:
+    driver: bridge
+
+services:
+    api:
+        build:
+          context: .
+          dockerfile: Dockerfile        
+        container_name: api
+        ports:
+          - "5024:5024"
+        depends_on:
+          - db
+        environment:
+          - ConnectionString="Server=localhost;Database=cuentas_michel_db;Username=postgres;Password=123"
+        networks:
+          - dev
+
+    db:
+        image: postgres:lastest
+        container_name: db
+        environment:
+          - POSTGRES_USER=postgres
+          - POSTGRES_PASSWORD=123
+          - POSTGRES_DB=cuentas_michel_db
+        ports:
+          - "5432:5432"
+        restart: always
+        volumes:
+          - data:/var/lib/postgresql/data
+        networks:
+          - dev
+
+volumes:
+    data:

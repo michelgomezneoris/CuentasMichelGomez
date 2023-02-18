@@ -1,0 +1,482 @@
+{
+	"info": {
+		"_postman_id": "a250076e-7e7b-4289-a3c0-340df33fefb4",
+		"name": "CuentasMichelGomez",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "ClientesAll",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5024/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5024/clientes/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"clientes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"usuario\": \"Usuario1\",\n  \"password\": \"123\",\n  \"estado\": true,\n  \"persona\": {\n    \"nombre\": \"Maria Lopez\",\n    \"genero\": \"Femenino\",\n    \"edad\": 20,\n    \"tipoIdentificacionId\": 1,\n    \"identificacion\": \"12345\",\n    \"direccion\": \"Calle 1\",\n    \"telefono\": \"6012223333\"\n  }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5024/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"clienteId\": 1,\n  \"usuario\": \"Usuario1\",\n  \"password\": \"12345\",\n  \"estado\": true,\n  \"personaId\": 1,\n  \"persona\": {\n    \"personaId\": 1,\n    \"nombre\": \"Maria Lopez\",\n    \"genero\": \"Femenino\",\n    \"edad\": 20,\n    \"tipoIdentificacionId\": 1,\n    \"identificacion\": \"12345\",\n    \"direccion\": \"Calle 1\",\n    \"telefono\": \"6012223333\"\n  }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5024/clientes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5024/clientes/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"clientes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuentas",
+			"item": [
+				{
+					"name": "CuentasAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5024/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cuentas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5024/cuentas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"cuentas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cuentas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"tipoCuentaId\": 1,\n  \"numeroCuenta\": \"12345\",\n  \"saldo\": 0,\n  \"estado\": true,\n  \"clienteId\": 2\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5024/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cuentas",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cuentaId\": 1,\n    \"tipoCuentaId\": 1,\n    \"numeroCuenta\": \"12345\",\n    \"saldo\": 0,\n    \"estado\": true,\n    \"clienteId\": 2\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5024/cuentas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"cuentas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cuentas",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5024/cuentas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"cuentas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movimientos",
+			"item": [
+				{
+					"name": "MovimientosAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5024/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movimientos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5024/movimientos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"movimientos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movimientos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"tipoMovimientoId\": 1,\n  \"fecha\": \"2023-02-18T01:43:55.177Z\",\n  \"valor\": 10,\n  \"cuentaId\": 2\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5024/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movimientos",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"movimientoId\": 1,\n  \"tipoMovimientoId\": 1,\n  \"fecha\": \"2023-02-18T01:46:26.990Z\",\n  \"valor\": 10,\n  \"cuentaId\": 2\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5024/movimientos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"movimientos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movimientos",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5024/movimientos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"movimientos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reportes",
+			"item": [
+				{
+					"name": "Reportes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5024/reportes?FechaInicial=2023-01-01&FechaFin=2023-02-28&Identificacion=12345",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5024",
+							"path": [
+								"reportes"
+							],
+							"query": [
+								{
+									"key": "FechaInicial",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "FechaFin",
+									"value": "2023-02-28"
+								},
+								{
+									"key": "Identificacion",
+									"value": "12345"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
